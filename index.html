@@ -17,7 +17,7 @@
             <h2 id="title">BAARISHEIN</h2>
             <h3 id="artist">Anuv Jain</h3>
             <div class="img_container">
-                <img src="images/Baarishein.jpeg" alt="">
+                <img src="images/img2.jpeg" alt="">
             </div>
             <audio src="music/Baarishein-[Hungama.Club].mp3"></audio>
 
@@ -29,5 +29,34 @@
             </div>
         </div>
     </div>
+    <script>
+        const music = document.querySelector("audio");
+        const img = document.querySelector("img");
+        const play = document.getElementById("play");
+        
+        let isPlaying = false;
+        play.addEventListener('click', () => {
+            isPlaying = true;
+            music.play();
+            play.classList.replace("fa-play", "fa-pause");
+            img.classList.add("anime");
+        });
+
+        play.addEventListener('click', () => {
+            isPlaying = false;
+            music.play();
+            play.classList.replace("fa-play", "fa-pause");
+            img.classList.add("anime");
+        });
+        play.addEventListener('click', () => {
+            if(isPlaying){
+                pauseMusic();
+            }else{
+                playMusic();
+            }
+          
+        });
+
+    </script>
 </body>
 </html>
