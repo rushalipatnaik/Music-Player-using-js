@@ -17,9 +17,9 @@
             <h2 id="title">BAARISHEIN</h2>
             <h3 id="artist">Anuv Jain</h3>
             <div class="img_container">
-                <img src="images/img2.jpeg" alt="">
+                <img src="" alt="">
             </div>
-            <audio src="music/Baarishein-[Hungama.Club].mp3"></audio>
+            <audio src=""></audio>
 
             <!-- controls -->
             <div class="music_controls">
@@ -33,14 +33,14 @@
         const music = document.querySelector("audio");
         const img = document.querySelector("img");
         const play = document.getElementById("play");
-        const artist = document.getElementById("play");
-        const title = document.getElementById("play");
-        const prev = document.getElementById("play");
-        const next = document.getElementById("play");
+        const artist = document.getElementById("artist");
+        const title = document.getElementById("title");
+        const prev = document.getElementById("prev");
+        const next = document.getElementById("next");
 
         const songs = [
         {
-            name:"Baarishein-[Hungama.Club]",
+            name:"Baarishein",
             title:"BAARISHEIN",
             artist: "Anuv Jain",
         },
@@ -92,7 +92,7 @@
             title.textContent = songs.title;
             artist.textContent = songs.artist;
             music.src = "music/"+ songs.name + ".mp3";
-            img.src = "images/" + songs.name + ".jpg"
+            img.src = "images/" + songs.name + ".jpeg"
         };
         
         songIndex = 0;
@@ -109,8 +109,8 @@
             playMusic();
         }
 
-        next.addEventListener('click', nextSong());
-        prev.addEventListener('click', prevSong());
+        next.addEventListener('click', nextSong);
+        prev.addEventListener('click', prevSong);
 
 
 
